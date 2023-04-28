@@ -1,0 +1,206 @@
+.container {
+    background-color: rgb(225, 225, 225);
+    border-radius: 2px;
+    height: fit-content;
+    width: 100%;
+    padding: 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 5%;
+}
+
+/* Best Seller */
+
+.mostBought {
+    width: 260px;
+    height: fit-content;
+    padding: 0 10px;
+    padding-bottom: 20px;
+    flex-direction: column;
+    flex-basis: 20%;
+    flex-grow: 1;
+}
+
+.mostBought:hover {
+    transform: scale(1.02);
+}
+
+#mostBoughtImg {
+    width: 260px;
+    max-height: 260px;
+    border-radius: 2px;
+    display: flex;
+    margin: 0 auto;
+}
+
+#mostBoughtImg:hover {
+    border: solid rgb(173, 173, 173) 1px;
+}
+
+.bought {
+    width: 100%;
+}
+
+.bestSellerText {
+    color: white;
+    background-color: rgb(206, 21, 21);
+    border-radius: 2px;
+    width: fit-content;
+    padding: 3px 10px;
+    margin: 0 auto;
+    position: relative;
+    top: 45px;
+    font-weight: lighter;
+}
+
+/* Products You May Like */
+
+.recText {
+    text-align: center;
+}
+
+.mostViewsText {
+    color: black;
+    background-color: rgb(230, 185, 7);
+    border-radius: 2px;
+    width: fit-content;
+    padding: 3px 10px;
+    margin: 0 auto;
+    position: relative;
+    top: 35px;
+    z-index: 10;
+    font-size: 80%;
+}
+
+.recommendations {
+    padding: 0 5px;
+    flex-direction: column;
+    flex-basis: 60%;
+    display: inline;
+    overflow: hidden;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Slides */
+
+#companyName,
+.allCompanyName {
+    text-align: center;
+    font-weight: 700;
+    margin-top: 20px;
+    font-size: .9em;
+}
+
+#itemName,
+.allItemName {
+    text-align: center;
+    font-weight: lighter;
+    padding: 1px 0;
+    font-size: .9em;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgb(74, 74, 74);
+}
+
+#itemPrice,
+.allItemPrice {
+    text-align: center;
+    font-weight: 700;
+    padding: 2px 0;
+    font-size: 1.1em;
+}
+
+.slideImgs {
+    max-width: 200;
+    max-height: 200px;
+    border-radius: 1px;
+    margin: 21px auto;
+}
+
+.slideImgs:hover {
+    border: solid rgb(173, 173, 173) 1px;
+}
+
+.hide {
+    display: none !important;
+    max-width: 200;
+    max-height: 200px;
+    border-radius: 1px;
+    margin: 21px auto;
+}
+
+.wrapper:hover .hide {
+    border: solid rgb(173, 173, 173) 1px;
+    display: block !important;
+}
+
+.wrapper:hover .slideImgs {
+    display: none !important;
+} 
+
+#slides {
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+#slides:hover {
+    transform: scale(1.02) !important;
+}
+
+.views {
+    position: relative;
+    top: -20px;
+}
+
+.theSlides {
+    display: inline-block;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* For Smaller Screens */
+
+@media only screen and (max-width: 900px) {
+
+    .container{
+        padding: 0;
+    }
+
+    .mostBought,
+    .recommendations {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .slideImgs,
+    #viewedImg,
+    .hide {
+        height: 90px;
+        width: 90px;
+    }
+
+    .mostViewsText {
+        font-size: .5em;
+        position: relative;
+        top: 30px;
+        padding: 1px 2px;
+    }
+
+    .views {
+        position: relative;
+        top: -13px;
+        width: 100%;
+    }
+
+}
